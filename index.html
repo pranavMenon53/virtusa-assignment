@@ -29,6 +29,25 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+    <!-- Load after 2 seconds-->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        setTimeout(function () {
+          $(".img-fluid").each(function () {
+            var imagex = $(this);
+            var imgOriginal = imagex.data("original");
+            $(imagex).attr("src", imgOriginal);
+          });
+        }, 5000);
+      });
+    </script>
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -187,10 +206,16 @@
         </li>
       </div>
     </div>
+
     <div class="container">
       <div class="card" style="width: 300px; float: left; margin: 10px;">
-        <div class="card-body">
-          <img src="images/cse-department.png" class="img-fluid" />
+        <div class="card-body" id="base">
+          <img
+            src="http://i.imgur.com/7ZMlu3C.gif"
+            data-original="images/cse-department.png"
+            class="img-fluid center"
+            id="img"
+          />
         </div>
         <div class="card-footer">
           <p class="h4">CSE Logo</p>
@@ -202,7 +227,11 @@
       </div>
       <div class="card" style="width: 300px; float: left; margin: 10px;">
         <div class="card-body">
-          <img src="images/cse-department.png" class="img-fluid" />
+          <img
+            src="http://i.imgur.com/7ZMlu3C.gif"
+            data-original="images/cse-department.png"
+            class="img-fluid"
+          />
         </div>
         <div class="card-footer">
           <p class="h4">CSE Logo</p>
@@ -214,7 +243,11 @@
       </div>
       <div class="card" style="width: 300px; float: left; margin: 10px;">
         <div class="card-body">
-          <img src="images/cse-department.png" class="img-fluid" />
+          <img
+            src="http://i.imgur.com/7ZMlu3C.gif"
+            data-original="images/cse-department.png"
+            class="img-fluid"
+          />
         </div>
         <div class="card-footer">
           <p class="h4">CSE Logo</p>
