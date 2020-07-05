@@ -30,28 +30,26 @@
       crossorigin="anonymous"
     ></script>
 
-<!--  -->
+    <!--  -->
     <script>
+      var arr = [
+        "To be a state of the art institution of engineering in pursuit of excellence, in the service of society.",
+        "To excel in providing quality education at under graduate and graduate levels. To encourage research and innovation. To provide infrastructure and facilities to meet the latest technological needs. To establish Centres of Excellence through active interaction with industry. To nurture students towards holistic development with human values and ethics.",
+        `This is a very special year for the college since we have accomplished our goal of being in the top 3 private engineering colleges in the state. We have come a long way since our humble beginning in 2001 and made this possible within a record time. On behalf of the management I thank our faculty, staff, students, employers, industry partners, alumni, affiliating university (JNTUH) and other stakeholders. I am really excited to inform you that CVR continues to attract the best students and faculty, the key pillars of any premier educational institution. The college has been awarded the National Employability Award for the seventh year in a row, a feat accomplished only by CVR.`,
+      ];
+
       $(document).ready(function () {
-          change('.one','.two');
+        change(0);
       });
 
-      function change(cur,next){
-        $(document).ready(function () {
-          setTimeout(function () {
-            $(cur).each(function () {
-              var imagex = $(this);
-              var imgOriginal = imagex.data("original");
-              $(imagex).attr("src", imgOriginal);
-              change(next,cur == '.one' ? '.three' : '.null');
-            });
-          }, 3000);
-        });
-      }
-
-
+      const change = (ind) => {
+        setTimeout(function () {
+          $("#id" + (ind + 1)).text(arr[ind]);
+          ind < 2 ? change(ind + 1) : "";
+        }, 3000);
+      };
     </script>
-<!--  -->
+    <!--  -->
 
     <style>
       .footer {
@@ -186,9 +184,7 @@
       </div>
     </div>
 
-
-
-    <div class="container base">
+    <!-- <div class="container base">
       <div class="card" style="width: 300px; float: left; margin: 10px;">
         <div class="card-body" id="base">
           <img
@@ -237,11 +233,31 @@
           </p>
         </div>
       </div>
+    </div> -->
+
+    <div class="container base">
+      <div class="card">
+        <div class="card-header">Vision of the Institute</div>
+        <p id="id1" class="card-body"><b>Loading..</b></p>
+      </div>
+
+      <br />
+      <div class="card">
+        <div class="card-header">Mission Of the Institute</div>
+        <p id="id2" class="card-body"><b>Loading..</b></p>
+      </div>
+
+      <br />
+      <div class="card">
+        <div class="card-header">Chairman's message</div>
+        <p id="id3" class="card-body"><b>Loading..</b></p>
+      </div>
+      <br />
     </div>
 
-    <footer class="footer blue">
+    <footer style="margin: 16px;" class="footer blue">
       <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">
+      <div class="footer text-center">
         © 2020 Copyright:
         <a href="http://cvr.ac.in/home4/"> cvr.ac.in</a>
       </div>
