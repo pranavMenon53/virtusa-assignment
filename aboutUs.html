@@ -2,10 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About us</title>
     <!-- CSS only -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link href="css/landing-page.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -13,6 +23,12 @@
       crossorigin="anonymous"
     />
 
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link
+      href="vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- JS, Popper.js, and jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -61,7 +77,7 @@
         color: white;
         text-align: center;
       }
-      img {
+      .cus-img {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -177,10 +193,65 @@
           <source srcset="./images/aboutUs1.png" type="image/svg+xml" />
           <img
             src="./images/aboutUs1.png"
-            class="img-fluid img-thumbnail"
+            class="img-fluid img-thumbnail cus-img"
             alt="..."
           />
         </picture>
+      </div>
+    </div>
+
+    <div class="container" style="width:70%; align-items: center;">
+      <h1 style="position: relative;"><br/>Gallery</h1>
+      <div
+        class="carousel slide"
+        id="car"
+        data-ride="carousel"
+        style="padding-top: 55px;"
+        data-interval="2000"
+      >
+        <div class="carousel-inner">
+          <ol class="carousel-indicators">
+            <li class="active" data-target="#car" data-slide-to="0"></li>
+            <li data-target="#car" data-slide-to="1"></li>
+            <li data-target="#car" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-item active">
+            <img
+              src="images/DPP_1.jpg"
+              class="img-fluid"
+              style="height: 400px; width: 100%;"
+            />
+            <div class="carousel-caption">
+              <h3>CSE Block</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/cvr-library.jpg"
+              class="img-fluid"
+              style="height: 400px; width: 100%;"
+            />
+            <div class="carousel-caption">
+              <h3>Library</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/cvr-mainblock.jpg"
+              class="img-fluid"
+              style="height: 400px; width: 100%;"
+            />
+            <div class="carousel-caption">
+              <h3>Main Block</h3>
+            </div>
+          </div>
+        </div>
+        <a href="#car" class="carousel-control-prev" data-slide="prev">
+          <span class="carousel-control-prev-icon"> </span>
+        </a>
+        <a href="#car" class="carousel-control-next" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
     </div>
 
@@ -234,6 +305,67 @@
         </div>
       </div>
     </div> -->
+    <!-- Chnage start -->
+
+    <br />
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 order-lg-2 text-white showcase-img"
+            style="background-image: url('images/infra1.png');"
+          ></div>
+
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text" style="padding-left: 16px;">
+            <h2>Infrastructure: A Key Element of Students</h2>
+            <p class="lead mb-0">
+              The College is spread over a built-up area of over 36,000 sqm. on a sprawling 33-acre campus amidst verdant surroundings.
+              <br/>The College has
+              <ul class="lead mb-0">
+                <li>70 spacious classrooms and 31 labs</li>
+                <li>An independent three storied Library building</li>
+                <li>An independent four storied Student Centre</li>
+                <li>Auditorium </li>
+                <li>Extensive outdoor sports facilities</li>
+                <li>Hostel facilities</li>
+              </ul>
+            </p>
+          </div>
+          
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 text-white showcase-img"
+            style="background-image: url('images/infra.jpg');"
+          ></div>
+          <div class="col-lg-6 my-auto showcase-text" style="padding-left: 16px;">
+            <h2>State of the art facilities</h2>
+            <p class="lead mb-0">
+              Students are enabled to explore the technology of today and build
+              their skills from the ground up under the guidance of expert
+              professors.
+            </p>
+          </div>
+          <br />
+        </div>
+        <div class="row no-gutters">
+          <div
+            class="col-lg-6 order-lg-2 text-white showcase-img"
+            style="background-image: url('images/infra2.jpg');"
+          ></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text" style="padding-left: 16px;">
+            <h2>Student Centre &amp; Customize</h2>
+            <p class="lead mb-0">
+              The Student Centre is an independent four story building which houses various facilities such as canteen, gym, indoor sports facilities, medical centre, and placement office.
+            </p>
+          </div>
+          <br />
+        </div>
+      </div>
+      <br />
+    </section>
+
+    <!-- Chnage end -->
 
     <div class="container base">
       <div class="card">
@@ -255,7 +387,7 @@
       <br />
     </div>
 
-    <footer style="margin: 16px;" class="footer blue">
+    <footer style="margin: 16px;" class="blue custom-footer">
       <!-- Copyright -->
       <div class="footer text-center">
         © 2020 Copyright:
@@ -267,6 +399,6 @@
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+
   </body>
 </html>
